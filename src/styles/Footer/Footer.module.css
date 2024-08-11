@@ -1,0 +1,102 @@
+.footer {
+  padding: 1.25rem;
+  background-color: #000000;
+  color: white;
+  text-align: left;
+}
+
+.topFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.topFooter div {
+  flex: 1;
+  margin: 0 1.25rem;
+}
+
+.topFooter h3,
+.topFooter h2 {
+  margin: 0.625rem 0;
+}
+
+.topFooter p {
+  margin: 0.3125rem 0;
+}
+
+.topFooter .inputContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 0.625rem;
+}
+
+.topFooter input {
+  padding: 0.625rem;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.currncy {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.topFooter button {
+  padding: 0.625rem 1.25rem;
+  border: 2px solid white;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  margin-left: 0.625rem;
+}
+
+.topFooter button:hover {
+  background-color: #fefefe;
+  color: #000;
+}
+
+.topFooter .smallText {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.divider1 {
+  display: none;
+}
+
+.divider2 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .topFooter {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .topFooter div {
+    margin: 0;
+  }
+
+  .divider1 {
+    margin: 1rem 0;
+    width: 100%;
+    display: block;
+  }
+
+  .divider2 {
+    margin: 1rem 0;
+    color: #666;
+    display: block;
+    width: 100%;
+  }
+
+  .smallText {
+    display: none;
+  }
+}

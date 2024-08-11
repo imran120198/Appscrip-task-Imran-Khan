@@ -1,0 +1,147 @@
+.bottomFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.svg {
+  width: 3.125rem;
+  height: auto;
+  margin: 0 0.25rem;
+}
+
+.svgs {
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+  padding: 0.625rem 0;
+  border-top: 0.0625rem solid #333;
+}
+
+.column {
+  flex: 1;
+  margin: 0 0.625rem;
+}
+
+.column h2 {
+  margin-bottom: 0.625rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dropdownList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+}
+
+.dropdownList.show {
+  display: block;
+}
+
+.dropdownList li {
+  padding: 0.625rem;
+  cursor: pointer;
+  color: white;
+}
+
+.dropdownList li:hover {
+  background-color: #333;
+}
+
+.socialIcon {
+  display: flex;
+}
+
+.socialIcon svg {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 48rem) {
+  .dropdown {
+    display: block;
+  }
+
+  .bottomFooter {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .dropdownButton {
+    padding: 0;
+  }
+
+  .column ul {
+    display: none;
+  }
+
+  .column button {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  .dropdownList {
+    display: none;
+    overflow-y: scroll;
+    height: 200px;
+  }
+
+  .dropdownList.show {
+    display: block;
+  }
+
+  .divider {
+    margin: 1rem 0;
+    color: #666;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: 48.0625rem) {
+  .dropdownButton {
+    display: none;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .dropdownList {
+    display: block;
+    position: static;
+    background-color: transparent;
+  }
+
+  .dropdownList li {
+    padding: 0.3125rem 0;
+  }
+}
