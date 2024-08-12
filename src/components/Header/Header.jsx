@@ -1,70 +1,67 @@
-import Image from "next/image";
-import React from "react";
-import styles from "../../styles/Header/Header.module.css";
 import topnavbargrid from "../../assets/topnavbargrid.svg";
-import logo from "../../assets/logo.svg";
-import search from "../../assets/search.svg";
-import heart from "../../assets/heart.svg";
-import cart from "../../assets/cart.svg";
-import user from "../../assets/user.svg";
-import { ChevronDown, Menu } from "lucide-react";
+import Logo from "../../assets/logo.svg";
+import Image from "next/image";
+import { Backpack, ChevronDown, Heart, Menu, Search, User } from "lucide-react";
 
-const Header = () => {
+export default function Header() {
   return (
-    <div className={styles.header}>
-      <div className={styles.topNavbar}>
-        <span>
-          <Image src={topnavbargrid} alt="topnavbargrid" className="mr-4" />
-          <p>Lorem ipsum dolor</p>
-        </span>
-        <span>
-          <Image src={topnavbargrid} alt="topnavbargrid" className="mr-4" />
-          <p>Lorem ipsum dolor</p>
-        </span>
-        <span>
-          <Image src={topnavbargrid} alt="topnavbargrid" className="mr-4" />
-          <p>Lorem ipsum dolor</p>
-        </span>
-      </div>
-
-      <div className={styles.middleNavbar}>
-        <div>
-          <Menu className={styles.menu} />
-          <Image src={logo} alt="logo" />
+    <>
+      <div className="bg-black flex items-center justify-center py-2 lg:items-center justify-evenly">
+        <div className="flex items-center space-x-1">
+          <Image src={topnavbargrid} alt="topnavbargrid" />
+          <h1 className="text-[#EB4C6B]">Lorem ipsum dolor</h1>
         </div>
-        <div>
-          <p className={styles.logo}>LOGO</p>
+        <div className="hidden md:flex items-center space-x-1">
+          <Image src={topnavbargrid} alt="topnavbargrid" />
+          <h1 className="text-[#EB4C6B]">Lorem ipsum dolor</h1>
         </div>
-        <div className={styles.icons}>
-          <span>
-            <Image src={search} alt="search icon" />
-          </span>
-          <span>
-            <Image src={heart} alt="heart icon" />
-          </span>
-          <span>
-            <Image src={cart} alt="cart icon" />
-          </span>
-          <span>
-            <Image src={user} alt="user icon" />
-          </span>
-          <span className={styles.language}>
-            <p>ENG</p>
-            <ChevronDown />
-          </span>
+        <div className="hidden md:flex items-center space-x-1">
+          <Image src={topnavbargrid} alt="topnavbargrid" />
+          <h1 className="text-[#EB4C6B]">Lorem ipsum dolor</h1>
         </div>
       </div>
 
-      {/* Bootom Navbar */}
-      <div className={styles.bottomNavbar}>
-        <div>SHOP</div>
-        <div>SKILLS</div>
-        <div>STORIES</div>
-        <div>ABOUT</div>
-        <div>CONTACT US</div>
+      <nav className="text-black px-4 md:px-20 mt-8">
+        <div className="container mx-auto flex items-center justify-between relative">
+          <div className="flex items-center space-x-4">
+            <Menu className="h-6 w-6 md:hidden" cursor="pointer" />
+            <Image src={Logo} alt="Logo" />
+          </div>
+
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <h1 className="text-[36px] font-black">LOGO</h1>
+          </div>
+
+          <div className="flex items-center space-x-4 md:space-x-6">
+            <Search className="h-6 w-6 cursor-pointer" />
+            <Heart className="h-6 w-6 cursor-pointer" />
+            <Backpack className="h-6 w-6 cursor-pointer" />
+            <User className="h-6 w-6 cursor-pointer hidden md:block" />
+            <div className="flex items-center space-x-1 hidden md:flex">
+              <h1 className="cursor-pointer font-bold">ENG</h1>
+              <ChevronDown className="h-4 w-4 cursor-pointer" />
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div className="mt-10">
+        <div className="hidden md:flex justify-center space-x-4 md:space-x-10">
+          <h1 className="cursor-pointer text-[22px] font-bold">HOME</h1>
+          <h1 className="cursor-pointer text-[22px]  font-bold">SHOP</h1>
+          <h1 className="cursor-pointer text-[22px]  font-bold">SKILLS</h1>
+          <h1 className="cursor-pointer text-[22px]  font-bold">STORIES</h1>
+          <h1 className="cursor-pointer text-[22px]  font-bold">ABOUT</h1>
+          <h1 className="cursor-pointer text-[22px]  font-bold">CONTACT US</h1>
+        </div>
       </div>
-    </div>
+      <hr className="h-px my-4 bg-horizontalLineColor border-1"></hr>
+      <div className="flex justify-start space-x-1 md:hidden p-2 ">
+        <h1 className="cursor-pointer font-textfont font-bold text-gray-400">
+          HOME |
+        </h1>
+        <h1 className="cursor-pointer font-textfont font-bold">SHOP</h1>
+      </div>
+    </>
   );
-};
-
-export default Header;
+}

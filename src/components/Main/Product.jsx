@@ -17,7 +17,7 @@ const Product = ({ products }) => {
           />
           <h4 className="text-left">{product.title.substring(0, 25)}</h4>
           <div className={styles.productCardBottom}>
-            <p className="text-[12px]">
+            <p>
               Sign in or Create an account to see pricing
             </p>
             <div>

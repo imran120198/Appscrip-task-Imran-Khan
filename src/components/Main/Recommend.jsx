@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../styles/Main/recommend.module.css";
+import styles from "../../styles/Main/Recommend.module.css";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const Recommend = () => {
