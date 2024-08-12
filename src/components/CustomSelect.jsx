@@ -24,11 +24,16 @@ const CustomSelect = ({ options, label, onChange }) => {
   return (
     <div className={styles.selectContainer}>
       <div className={styles.labelContainer} onClick={handleToggle}>
-        <label className={styles.label}>{label}</label>
+        <div className={styles.label}>
+          <label>{label}</label>
+          <p>All</p>
+        </div>
+
         <span className={styles.arrow}>
           {isOpen ? <ChevronUp /> : <ChevronDown />}
         </span>
       </div>
+
       {isOpen && (
         <div className={styles.options}>
           {options.map((option) => (

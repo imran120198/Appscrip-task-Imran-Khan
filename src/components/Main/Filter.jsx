@@ -5,6 +5,10 @@ import CustomSelect from "../CustomSelect";
 const Filter = ({ filters, onChange }) => {
   return (
     <div className={styles.filterContainer}>
+      <div className={styles.custom}>
+        <input type="checkbox" />
+        <span>CUSTOMIZABLE</span>
+      </div>
       {filters.map((filter, index) => (
         <div key={index} className={styles.filter}>
           <CustomSelect

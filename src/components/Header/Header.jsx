@@ -1,11 +1,20 @@
+"use client";
+
+import React, { useState } from "react";
 import topnavbargrid from "../../assets/topnavbargrid.svg";
 import Logo from "../../assets/logo.svg";
 import Image from "next/image";
 import { Backpack, ChevronDown, Heart, Menu, Search, User } from "lucide-react";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <>
+    <div>
       <div className="bg-black flex items-center justify-center py-2 lg:items-center justify-evenly">
         <div className="flex items-center space-x-1">
           <Image src={topnavbargrid} alt="topnavbargrid" />
@@ -24,7 +33,10 @@ export default function Header() {
       <nav className="text-black px-4 md:px-20 mt-8">
         <div className="container mx-auto flex items-center justify-between relative">
           <div className="flex items-center space-x-4">
-            <Menu className="h-6 w-6 md:hidden" cursor="pointer" />
+            <Menu
+              className="h-6 w-6 md:hidden cursor-pointer"
+              onClick={toggleMenu}
+            />
             <Image src={Logo} alt="Logo" />
           </div>
 
@@ -46,22 +58,63 @@ export default function Header() {
       </nav>
 
       <div className="mt-10">
+        {/* Menu for desktop view */}
         <div className="hidden md:flex justify-center space-x-4 md:space-x-10">
-          <h1 className="cursor-pointer text-[22px] font-bold">HOME</h1>
-          <h1 className="cursor-pointer text-[22px]  font-bold">SHOP</h1>
-          <h1 className="cursor-pointer text-[22px]  font-bold">SKILLS</h1>
-          <h1 className="cursor-pointer text-[22px]  font-bold">STORIES</h1>
-          <h1 className="cursor-pointer text-[22px]  font-bold">ABOUT</h1>
-          <h1 className="cursor-pointer text-[22px]  font-bold">CONTACT US</h1>
+          <h1 className="cursor-pointer text-[22px] font-bold hover:text-gray-500">
+            HOME
+          </h1>
+          <h1 className="cursor-pointer text-[22px] font-bold hover:text-gray-500">
+            SHOP
+          </h1>
+          <h1 className="cursor-pointer text-[22px] font-bold hover:text-gray-500">
+            SKILLS
+          </h1>
+          <h1 className="cursor-pointer text-[22px] font-bold hover:text-gray-500">
+            STORIES
+          </h1>
+          <h1 className="cursor-pointer text-[22px] font-bold hover:text-gray-500">
+            ABOUT
+          </h1>
+          <h1 className="cursor-pointer text-[22px] font-bold hover:text-gray-500">
+            CONTACT US
+          </h1>
+        </div>
+
+        {/* Menu for mobile view */}
+        <div
+          className={`flex flex-row items-center md:hidden justify-between ${
+            menuOpen ? "block" : "hidden"
+          } p-2`}
+        >
+          <h1 className="cursor-pointer text-[14px] font-bold hover:text-gray-500">
+            HOME
+          </h1>
+          <h1 className="cursor-pointer text-[14px] font-bold hover:text-gray-500">
+            SHOP
+          </h1>
+          <h1 className="cursor-pointer text-[14px] font-bold hover:text-gray-500">
+            SKILLS
+          </h1>
+          <h1 className="cursor-pointer text-[14px] font-bold hover:text-gray-500">
+            STORIES
+          </h1>
+          <h1 className="cursor-pointer text-[14px] font-bold hover:text-gray-500">
+            ABOUT
+          </h1>
+          <h1 className="cursor-pointer text-[14px] font-bold hover:text-gray-500">
+            CONTACT US
+          </h1>
         </div>
       </div>
-      <hr className="h-px my-4 bg-horizontalLineColor border-1"></hr>
-      <div className="flex justify-start space-x-1 md:hidden p-2 ">
+
+      <hr className="h-px my-4 bg-horizontalLineColor border-1" />
+
+      <div className="flex justify-start space-x-1 md:hidden p-2">
         <h1 className="cursor-pointer font-textfont font-bold text-gray-400">
           HOME |
         </h1>
         <h1 className="cursor-pointer font-textfont font-bold">SHOP</h1>
       </div>
-    </>
+    </div>
   );
 }
