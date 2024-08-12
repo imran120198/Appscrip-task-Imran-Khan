@@ -7,10 +7,10 @@ const Recommend = () => {
   const [selectedOption, setSelectedOption] = useState("RECOMMENDED");
 
   const options = [
-    { value: "newest", label: "Newest first" },
-    { value: "popular", label: "Popular" },
-    { value: "price-high-low", label: "Price: high to low" },
-    { value: "price-low-high", label: "Price: low to high" },
+    { value: "newest", label: "NEWEST FIRST" },
+    { value: "popular", label: "POPULAR" },
+    { value: "price-high-low", label: "PRICE: HIGH TO LOW" },
+    { value: "price-low-high", label: "PRICE: LOW TO HIGH" },
   ];
 
   const handleToggle = () => {
