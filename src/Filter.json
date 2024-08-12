@@ -1,0 +1,74 @@
+[
+  {
+    "name": "IDEAL FOR",
+    "label": "IDEAL FOR",
+    "options": [
+      { "value": "MEN", "label": "MEN" },
+      { "value": "WOMEN", "label": "WOMEN" },
+      { "value": "BABY", "label": "BABY" }
+    ]
+  },
+  {
+    "name": "OCCASION",
+    "label": "OCCASION",
+    "options": [
+      { "value": "MEN", "label": "MEN" },
+      { "value": "WOMEN", "label": "WOMEN" },
+      { "value": "BABY", "label": "BABY" }
+    ]
+  },
+  {
+    "name": "WORK",
+    "label": "WORK",
+    "options": [
+      { "value": "MEN", "label": "MEN" },
+      { "value": "WOMEN", "label": "WOMEN" },
+      { "value": "BABY", "label": "BABY" }
+    ]
+  },
+  {
+    "name": "FABRIC",
+    "label": "FABRIC",
+    "options": [
+      { "value": "MEN", "label": "MEN" },
+      { "value": "WOMEN", "label": "WOMEN" },
+      { "value": "BABY", "label": "BABY" }
+    ]
+  },
+  {
+    "name": "SEGMENT",
+    "label": "SEGMENT",
+    "options": [
+      { "value": "MEN", "label": "MEN" },
+      { "value": "WOMEN", "label": "WOMEN" },
+      { "value": "BABY", "label": "BABY" }
+    ]
+  },
+  {
+    "name": "SUITABLE FOR",
+    "label": "SUITABLE FOR",
+    "options": [
+      { "value": "MEN", "label": "MEN" },
+      { "value": "WOMEN", "label": "WOMEN" },
+      { "value": "BABY", "label": "BABY" }
+    ]
+  },
+  {
+    "name": "RAW MATERIALS",
+    "label": "RAW MATERIALS",
+    "options": [
+      { "value": "MEN", "label": "MEN" },
+      { "value": "WOMEN", "label": "WOMEN" },
+      { "value": "BABY", "label": "BABY" }
+    ]
+  },
+  {
+    "name": "PATTERNS",
+    "label": "PATTERNS",
+    "options": [
+      { "value": "MEN", "label": "MEN" },
+      { "value": "WOMEN", "label": "WOMEN" },
+      { "value": "BABY", "label": "BABY" }
+    ]
+  }
+]

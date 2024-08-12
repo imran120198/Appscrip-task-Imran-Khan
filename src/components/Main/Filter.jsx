@@ -1,16 +1,21 @@
 import React from "react";
+import styles from "../../styles/Main/Filter.module.css";
+import CustomSelect from "../CustomSelect";
 
-const Filter = ({ onChange }) => {
-  const sections = [
-    { title: "IDEAL FOR", items: ["Men", "Women", "Baby & Kid"] },
-    { title: "OCCASION", items: ["Casual", "Formal", "Party"] },
-    { title: "WORK", items: ["Office", "Outdoor", "Home"] },
-    { title: "FABRIC", items: ["Cotton", "Silk", "Wool"] },
-    { title: "SEGMENT", items: ["Premium", "Economy"] },
-    { title: "SUITABLE FOR", items: ["Summer", "Winter", "All Seasons"] },
-    { title: "RAW MATERIALS", items: ["Cotton", "Polyester", "Nylon"] },
-  ];
-  return <div>Filter</div>;
+const Filter = ({ filters, onChange }) => {
+  return (
+    <div className={styles.filterContainer}>
+      {filters.map((filter, index) => (
+        <div key={index} className={styles.filter}>
+          <CustomSelect
+            label={filter.label}
+            options={filter.options}
+            onChange={(value) => onChange(filter.name, value)}
+          />
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default Filter;

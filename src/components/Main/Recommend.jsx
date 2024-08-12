@@ -38,7 +38,7 @@ const Recommend = () => {
               className={styles.dropdownOption}
               onClick={() => handleOptionClick(option)}
             >
-              {option.label}
+              {option.label.toUpperCase()}
             </div>
           ))}
         </div>

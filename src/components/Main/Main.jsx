@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/Main/Main.module.css";
-
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Recommend from "./Recommend";
 import Product from "./Product";
 import axios from "axios";
 import Filter from "./Filter";
+import filters from "../../Filter.json";
 
 const Main = () => {
   const [selectedFilters, setSelectedFilters] = useState({});
@@ -56,8 +56,17 @@ const Main = () => {
           <Recommend />
         </div>
       </div>
-      <Filter onChange={handleFilterChange} />
-      <Product products={products} />
+      <div className={styles.contentWrapper}>
+        {showFilters && (
+          <div className={`${styles.content} ${styles.filterWrapperMobile}`}>
+            <aside>
+              <Filter filters={filters} onChange={handleFilterChange} />
+            </aside>
+          </div>
+        )}
+
+        <Product products={products} />
+      </div>
     </>
   );
 };

@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../../styles/Main/Product.module.css";
+import styles from "../../styles/Main/Main.module.css";
 import { Heart } from "lucide-react";
 import Image from "next/image";
 
-const Product = ({products}) => {
+const Product = ({ products }) => {
   return (
     <section className={styles.products}>
       {products.map((product) => (
@@ -15,9 +15,11 @@ const Product = ({products}) => {
             alt={product.title}
             className={styles.productImage}
           />
-          <h4>{product.title}</h4>
+          <h4 className="text-left">{product.title.substring(0, 25)}</h4>
           <div className={styles.productCardBottom}>
-            <p>Sign in or Create an account to see pricing</p>
+            <p className="text-[12px]">
+              Sign in or Create an account to see pricing
+            </p>
             <div>
               <Heart />
             </div>
