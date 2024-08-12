@@ -23,11 +23,11 @@ const Main = () => {
   console.log(products);
 
   const handleFilterChange = (filterName, filterValue) => {
-    setSelectedFilters((prev) => ({ ...prev, [filterName]: filterValue }));
+    setSelectedFilters(prev => ({ ...prev, [filterName]: filterValue }));
   };
 
   const toggleFilters = () => {
-    setShowFilters((prev) => !prev);
+    setShowFilters(prev => !prev);
   };
 
   return (
@@ -64,7 +64,6 @@ const Main = () => {
             </aside>
           </div>
         )}
-
         <Product products={products} />
       </div>
     </>

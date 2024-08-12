@@ -1,20 +1,23 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import topnavbargrid from "../../assets/topnavbargrid.svg";
 import Logo from "../../assets/logo.svg";
-import Image from "next/image";
 import { Backpack, ChevronDown, Heart, Menu, Search, User } from "lucide-react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((prev) => !prev);
   };
 
   return (
-    <div>
+    <div
+      className="fixed top-0 left-0 w-full z-[1000] bg-white"
+      style={{ borderBottom: "1px solid #E5E5E5" }}
+    >
       <div className="bg-black flex items-center justify-center py-2 lg:items-center justify-evenly">
         <div className="flex items-center space-x-1">
           <Image src={topnavbargrid} alt="topnavbargrid" />
@@ -82,7 +85,7 @@ export default function Header() {
 
         {/* Menu for mobile view */}
         <div
-          className={`flex flex-row items-center md:hidden justify-between ${
+          className={`flex flex-row justify-between items-center md:hidden ${
             menuOpen ? "block" : "hidden"
           } p-2`}
         >
@@ -107,7 +110,7 @@ export default function Header() {
         </div>
       </div>
 
-      <hr className="h-px my-4 bg-horizontalLineColor border-1" />
+      <hr className="h-px my-4 bg-horizontalLineColor border-0" />
 
       <div className="flex justify-start space-x-1 md:hidden p-2">
         <h1 className="cursor-pointer font-textfont font-bold text-gray-400">
