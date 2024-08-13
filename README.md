@@ -11,7 +11,6 @@ https://appscrip-pi.vercel.app/
 ## Tech Stack
 
 * Next.js
-* TailwindCSS
 * CSS
 
 ## Setup

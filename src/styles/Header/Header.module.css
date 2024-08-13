@@ -1,32 +1,48 @@
-
-.headerContainer {
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  flex-direction: row;
-  flex-wrap: wrap;
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.top-navbar-item {
+.topNavbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: black;
+  padding: 2px;
+}
+
+.topNavbarContent, .topNavbarHide {
   display: flex;
   align-items: center;
   margin-right: 0.25rem;
-}
-
-.top-navbar-text {
   color: #eb4c6b;
 }
 
-/* Navigation container */
-.nav-container {
+.topNavbarContent > h1, .topNavbarHide > h1 {
+  margin-left: 5px;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.logoSection {
   color: black;
-  padding: 0 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   margin-top: 2rem;
 }
 
-.container {
+.logoContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,98 +50,153 @@
   margin: auto;
 }
 
-/* Logo section */
-.logo-section {
+.logo {
   display: flex;
   align-items: center;
-  margin-right: 1rem;
 }
 
-.menu-icon {
-  display: block;
-  height: 1.5rem;
-  width: 1.5rem;
-  cursor: pointer;
-}
-
-.logo-image {
-  height: auto;
-  width: auto;
-}
-
-/* Absolute center logo text */
-.logo-text {
+.middleLogo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2.25rem;
-  font-weight: 900;
 }
 
-/* Icons section */
-.icons-section {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.middleLogo > h1 {
+  font-size: 36px;
+  font-weight: bolder;
+  color: black;
 }
 
-.icon {
-  height: 1.5rem;
-  width: 1.5rem;
-  cursor: pointer;
-}
-
-.hidden-md {
-  display: none;
-}
-
-.show-md {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
-/* Bottom navbar */
-.bottom-navbar {
-  margin-top: 2.5rem;
-}
-
-.bottom-navbar-items {
+.desktop {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-.bottom-navbar-item {
-  font-size: 1.375rem;
-  font-weight: 700;
+.categoryDesktop {
   cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-/* Separator line */
-.separator {
-  height: 1px;
-  margin: 1rem 0;
-  background-color: #e5e5e5;
-  border: 1px solid #e5e5e5;
+.categoryDesktop:hover {
+  color: #6b7280;
 }
 
-/* Mobile bottom navbar */
-.mobile-bottom-navbar {
+.iconSection {
   display: flex;
-  justify-content: flex-start;
-  gap: 0.25rem;
-  padding: 0.5rem;
+  align-items: center;
+  gap: 1rem;
 }
 
-.mobile-bottom-navbar-item {
-  font-size: 0.875rem;
-  color: #a0a0a0;
+.icons, .hiddenicons {
   cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.hiddenicons {
+  display: none;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  display: none;
+}
+
+.menu-container.menu-open {
+  display: flex;
+}
+
+.lowerFilter {
+  display: none;
+}
+
+.mobile{
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .topNavbarHide {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    margin-right: 0.7rem;
+  }
+
+  .logoSection {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .middleLogo > h1 {
+    font-size: 22px;
+  }
+
+  .categoryMobile {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .categoryMobile:hover {
+    color: #6b7280;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .iconSection {
+    gap: 1.5rem;
+  }
+
+  .hiddenicons {
+    display: none;
+  }
+
+  .lowerFilter {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem;
+  }
+
+  .home {
+    cursor: pointer;
+    font-weight: bold;
+    color: #9ca3af;
+  }
+
+  .shop {
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0.5rem;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: -20px;
+  }
+
+  .hidden {
+    display: none;
+  }
 }
